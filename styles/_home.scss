@@ -1,0 +1,53 @@
+@use "variables";
+@use "mixin";
+@use "educations";
+
+#home{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../images/group.jpeg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .home-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+    }
+
+    h5{
+        font-size: 18px;
+        text-transform: uppercase;
+        color: variables.$main-color;
+        letter-spacing: 6px;
+        margin-bottom: 10px;
+    }
+
+    h1{
+        font-size: variables.$h1-font;
+        line-height: 1.2;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        @include mixin.laptop{
+            font-size: 4rem;
+        }
+
+        @include mixin.tablet{
+            font-size:  variables.$h2-font;
+        }
+    }
+
+    p{
+        font-size: variables.$p-font;
+        color: variables.$gray;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    button{
+        @include mixin.button;
+    }
+}

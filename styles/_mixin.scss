@@ -1,0 +1,69 @@
+@use "variables";
+
+@mixin flexBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin headerIcon{
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 18px;
+    transition: variables.$transition;
+    display: inline-block;
+    &:hover{
+        transform:  translateY(-3px);
+        color: variables.$main-color;
+    }
+}
+
+@mixin button{
+    padding: 13px 40px;
+    display: inline-block;
+    background-color: variables.$main-color;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition:  variables.$transition;
+    cursor: pointer;
+    &:hover{
+        border:  2px solid variables.$text-color;
+        transform: translateX(10px);
+        background-color: transparent;
+        color: variables.$text-color;
+    }
+}
+
+@mixin container{
+    padding: 70px 17% 60px;
+
+    @include mobile(){
+        padding: 5px 3% 30px;
+    }
+}
+
+@mixin formItems{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@mixin laptop{
+    @media (max-width: 1300px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media (max-width: 768px) {
+        @content;
+    }
+}

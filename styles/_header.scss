@@ -1,0 +1,90 @@
+@use "mixin";
+@use "variables";
+
+header{
+    background-color: rgba(255, 255, 255, 0.44);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    @include mixin.flexBox;
+    padding: 27px 17px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    .logo{
+    font-size: 33px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    @include mixin.mobile{
+        font-size: 25px;
+    }
+
+    span{
+        color: variables.$main-color;
+     }
+
+    }
+
+    nav{
+       
+        ul{
+           @include mixin.flexBox;
+           gap: 22px;
+           list-style-type: none;
+
+           @include mixin.laptop{
+            display: none;
+           }
+
+            li{
+              
+
+                a{
+                    text-transform: uppercase;
+                    font-size: variables.$p-font;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    display: inline-block;
+                    transition: variables.$transition;
+                    
+                    
+                    &:hover{
+                        scale: 1.2;
+                        color: variables.$main-color;
+                    }
+
+                }
+            }
+
+          
+        }
+    }
+
+    .header-right{
+        a, button{
+            @include mixin.headerIcon;
+        }
+
+        a{
+            font-size: variables.$p-font;
+            @include mixin.mobile{
+                display: none;
+            }
+
+        }
+
+        button {
+            background-color: transparent;
+            color: variables.$text-color;
+        }
+
+
+        
+    }
+}
+

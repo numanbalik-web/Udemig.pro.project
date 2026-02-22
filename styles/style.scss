@@ -1,0 +1,22 @@
+@use "variables";
+@use "header";
+@use "home";
+@use "aboutus";
+@use "popularcourses";
+@use "contact";
+@use "footer";
+
+*{
+     text-decoration: none;
+}
+
+body{
+    background-color: variables.$bg-color;
+    color: variables.$text-color;
+    font-family: variables.$font-family;
+   
+}
+
+a{
+    color: variables.$text-color;
+}

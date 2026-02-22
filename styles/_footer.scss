@@ -1,0 +1,79 @@
+@use "variables";
+@use "mixin";
+
+footer{
+    padding: 20px 30px;
+
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(180px, 1fr));
+        gap: 1rem 4rem;
+        margin-bottom: 50px;
+        align-items: start;
+
+        .box{
+            @include mixin.flexBox;
+            flex-direction: column;
+            gap: 10px;
+            align-items: unset;
+
+
+            h3{
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            list-style-type: none;
+            align-items: start;
+
+         
+
+            a{
+                color: #979797;
+                transition: variables.$transition;
+                display: block;
+
+                &:hover{
+                    color: variables.$text-color;
+                    transform: translateX(-5px);
+                }
+            }
+        }
+
+        .social-links{
+            @include mixin.flexBox;
+            gap: 10px;
+            a{
+                background-color: #202020;
+                width: 45px;
+                height: 45px;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                font-size: 20px;
+                transition: variables.$transition;
+
+                &:hover{
+                    background-color: variables.$main-color;
+                    transform: translateX(-5px);
+                    color: variables.$bg-color;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        text-align: center;
+        font-size: 15px;
+        color: #979797;
+
+        &:hover{
+            color: #535353;
+        }
+    }
+}

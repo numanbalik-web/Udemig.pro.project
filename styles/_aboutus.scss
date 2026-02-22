@@ -1,0 +1,55 @@
+@use "mixin";
+@use "variables";
+
+#about-us{
+    @include mixin.container;
+    @include mixin.flexBox;
+    gap: 9rem; 
+    
+
+    @include mixin.tablet{
+        flex-direction: column;
+    }
+
+    .about-us-image{
+        flex: 1;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+
+    .about-us-text{
+        flex: 1;
+        @include mixin.flexBox;
+        flex-direction: column;
+        align-items: unset;
+        gap: 20px;
+
+        @include mixin.mobile{
+            text-align: center;
+        }
+
+        h5{
+            color: variables.$main-color;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+        }
+
+        h1{
+            font-size: variables.$h2-font;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        button{
+            @include mixin.button;
+        }
+    }
+   
+}

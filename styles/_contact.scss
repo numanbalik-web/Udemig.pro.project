@@ -1,0 +1,64 @@
+@use "mixin";
+@use "variables";
+
+#contact-us{
+    @include mixin.flexBox;
+    gap: 20px;
+    padding: 20px 5%;
+
+    @include mixin.tablet{
+        flex-direction: column;
+    }
+
+    .contact-us-image{
+        flex: 1;
+       
+
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    .contact-us-form{
+        flex: 1;
+        width: 100%;
+
+        .field{
+            margin: 15px 0;
+            label{
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input, textarea{
+                @include mixin.formItems;
+                box-sizing: border-box;
+
+            }
+
+            textarea{
+                resize: none;
+                height: 150px;
+                width: 100% !important;
+            }
+        }
+
+         button{
+        
+            @include mixin.formItems;
+            background-color: variables.$main-color;
+            color: variables.$text-color;
+            font-weight: bold;
+            transition: variables.$transition;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #a48032;
+            }
+        }
+    }
+
+   
+}
