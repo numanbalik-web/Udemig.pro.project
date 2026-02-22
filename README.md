@@ -40,7 +40,7 @@ Bu proje HTML ve CSS kullanılarak geliştirilmiştir.
 
 ## 🖥 Fullscreen View
 
-![Fullscreen](screen/fullscreen.png)
+![Fullscreen](screen/fullscrren.png)
 
 > Sayfanın tam görünümü ve genel tasarım bütünlüğü.
 
@@ -60,7 +60,7 @@ Bu proje HTML ve CSS kullanılarak geliştirilmiştir.
 ## 🙏 Teşekkür
 
 Bu proje frontend gelişim sürecimin bir parçası olarak hazırlanmıştır.  
-Sürece katkıları ve yönlendirmeleri için **Mehmet Can Seyhan**’a teşekkür ederim.
+Sürece katkıları ve yönlendirmeleri için **        isveckrali**’a teşekkür ederim.
 
 ---
 
