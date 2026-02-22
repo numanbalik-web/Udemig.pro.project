@@ -60,7 +60,7 @@ Bu proje HTML ve CSS kullanılarak geliştirilmiştir.
 ## 🙏 Teşekkür
 
 Bu proje frontend gelişim sürecimin bir parçası olarak hazırlanmıştır.  
-Sürece katkıları ve yönlendirmeleri için **        isveckrali**’a teşekkür ederim.
+Sürece katkıları ve yönlendirmeleri için ** https://github.com/isveckrali **’a teşekkür ederim.
 
 ---
 
